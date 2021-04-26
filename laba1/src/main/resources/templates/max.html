@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="/max" method="post">
+    <div>Число1: <label>
+        <input type="text" name="inputNumber1" style="width: 50px" />
+    </label></div>
+    <div>Число2: <label>
+        <input type="text" name="inputNumber2" style="width: 50px" />
+    </label></div>
+    <div>Число3: <label>
+        <input type="text" name="inputNumber3" style="width: 50px" />
+    </label></div>
+    <div th:text="${message}"></div>
+    <br>
+    <button type="submit">Посчитать</button>
+</form>
+<form action="/showCollection" method="post" >
+    <div>
+        <button type="submit">Показать историю</button>
+        <p th:utext="${collection}"/>
+    </div>
+</form>
+<form action="/sortByPosition" method="post" >
+    <div>
+        <button type="submit">Отсортировать по максимальному значению</button>
+    </div>
+</form>
+<form action="/clearCollection" method="post" >
+    <div>
+        <button type="submit">Очистить историю</button>
+    </div>
+</form>
+</body>
+</html>
